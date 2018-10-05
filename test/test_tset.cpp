@@ -295,3 +295,16 @@ TEST(TSet, check_negation_operator)
 
   EXPECT_EQ(expSet, set1);
 }
+
+//TEST(TBitField, my_test1_)
+//{
+//  TSet bf1(10), bf2(3), bf(10);
+//
+//  bf1.InsElem(3);
+//  bf2.InsElem(4);
+//  bf = bf1 + bf2;
+//
+//  EXPECT_NE(0, bf1.IsMember(3));
+//  EXPECT_NE(0, bf2.IsMember(4));
+//  EXPECT_EQ(0, bf.IsMember(6));
+//}
