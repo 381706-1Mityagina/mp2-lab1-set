@@ -33,6 +33,7 @@ TBitField::TBitField(const TBitField &bf) // конструктор копиро
 TBitField::~TBitField()
 {
   delete[]pMem;
+  pMem = NULL;
 }
 // ---------------------------------------------------------------------------
 int TBitField::GetMemIndex(const int n) const // индекс Мем для бита n
@@ -102,15 +103,17 @@ TBitField& TBitField::operator=(const TBitField &bf) // присваивание
 // ---------------------------------------------------------------------------
 int TBitField::operator==(const TBitField &bf) const // сравнение
 {
+  int r = 1;
   if (BitLen != bf.BitLen)
-	return 0;
+	r = 0;
   else
 	for (int i = 0; i < MemLen; i++)
 	  if (pMem[i] != bf.pMem[i])
 	  {
-		return 0;
+		r= 0;
 		break;
 	  }
+  return r;
 }
 // ---------------------------------------------------------------------------
 int TBitField::operator!=(const TBitField &bf) const // сравнение
