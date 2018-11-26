@@ -166,14 +166,14 @@ istream &operator>>(istream &istr, TSet &s)
 {
   int i;
   cin >> i;
-  for (; ((i > -1) && (i < s.maxPower)); cin >> i)
-    s.bitField.setBit(i);
+  for (; ((i > -1) && (i < s.MaxPower)); cin >> i)
+    s.BitField.SetBit(i);
   return istr;
 }
 // ---------------------------------------------------------------------------
 ostream& operator<<(ostream &ostr, const TSet &s)
 {
-  ostr << s.bitField << ' ';
+  ostr << s.BitField << ' ';
   return ostr;
 }
 // ---------------------------------------------------------------------------
