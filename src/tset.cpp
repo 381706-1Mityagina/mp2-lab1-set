@@ -133,7 +133,7 @@ TSet TSet::operator~(void) // дополнение
 // ---------------------------------------------------------------------------
 // перегрузка ввода/вывода
 
-istream &operator>>(istream &istr, TSet &s) // ввод
+/*istream &operator>>(istream &istr, TSet &s) // ввод
 {
   char something;
   int insert;
@@ -160,6 +160,20 @@ ostream& operator<<(ostream &ostr, const TSet &s) // вывод
 	ostr << ',';
   }
   ostr << '}';
+  return ostr;
+}*/
+istream &operator>>(istream &istr, TSet &s)
+{
+  int i;
+  cin >> i;
+  for (; ((i > -1) && (i < s.maxPower)); cin >> i)
+    s.bitField.setBit(i);
+  return istr;
+}
+// ---------------------------------------------------------------------------
+ostream& operator<<(ostream &ostr, const TSet &s)
+{
+  ostr << s.bitField << ' ';
   return ostr;
 }
 // ---------------------------------------------------------------------------
