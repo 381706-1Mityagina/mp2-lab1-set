@@ -62,7 +62,7 @@ int main()
   cout << "\n\nВывод битового поля в целых числах\n";
   for (m = 0; m <= n; m++)
   {
-    if (_bit.getBit(m))
+    if (_bit.GetBit(m))
       cout << setw(3) << m << " ";
   }
 }
@@ -118,7 +118,7 @@ int main()
   cout << "\n\nВывод множества в целых числах\n";
   for (m = 0; m <= n; m++)
   {
-    if (_bit.isMember(m))
+    if (_bit.IsMember(m))
       cout << setw(3) << m << " ";
   }
 }
