@@ -127,6 +127,7 @@ int TBitField::operator!=(const TBitField &bf) const // сравнение
 		return 1;
 		break;
 	  }
+	return 0;
 }
 // ---------------------------------------------------------------------------
 TBitField TBitField::operator|(const TBitField &bf) // операция "или"
