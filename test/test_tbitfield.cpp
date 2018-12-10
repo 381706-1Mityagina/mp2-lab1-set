@@ -315,7 +315,7 @@ TEST(TBitField, eq_bitfields_true_check)
 
 	bf1.SetBit(1); bf2.SetBit(1);
 
-	EXPECT_EQ(true, bf2 == bf1);
+	EXPECT_EQ(1, bf2 == bf1);
 }
 //---------------------------------------------------------------------------------
 TEST(TBitField, eq_bitfields_false_check)
@@ -325,8 +325,9 @@ TEST(TBitField, eq_bitfields_false_check)
 
 	bf1.SetBit(1); bf2.SetBit(0);
 
-	EXPECT_EQ(false, bf2 == bf1);
+	EXPECT_EQ(0, bf2 == bf1);
 }
+//---------------------------------------------------------------------------------
 TEST(TBitField, nonequivalence_bitfields_true_check)
 {
 	int dlina = 7;
