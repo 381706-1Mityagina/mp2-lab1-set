@@ -70,18 +70,16 @@ TSet& TSet::operator=(const TSet &s) // присваивание
 // ---------------------------------------------------------------------------
 int TSet::operator==(const TSet &s) const // сравнение
 {
-  if (BitField == s.BitField)
-	return 1;
+ 	return (bitField == s.bitField);
 }
 // ---------------------------------------------------------------------------
 int TSet::operator!=(const TSet &s) const // сравнение
 {
-  int inf = 0;
-  if (MaxPower != s.MaxPower)
-	 inf = 1;
-  if (BitField != s.BitField)
-	 inf = 1;
-  return inf;
+  if (MaxPower != s.MaxPower) 
+	  return 1;
+	else
+	if (bitField != s.bitField) return 1;
+	return 0;
 }
 // ---------------------------------------------------------------------------
 TSet TSet::operator+(const TSet &s) // объединение
