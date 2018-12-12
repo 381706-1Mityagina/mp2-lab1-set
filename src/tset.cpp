@@ -42,21 +42,21 @@ int TSet::IsMember(const int Elem) const // элемент множества?
 {
   if (Elem < 0 || Elem >= maxPower)
 	throw "Smth's Wrong";
-  return BitField.GetBit(Elem);
+  return bitField.GetBit(Elem);
 }
 // ---------------------------------------------------------------------------
 void TSet::InsElem(const int Elem) // включение элемента множества
 {
   if (Elem < 0 || Elem >= maxPower)
 	throw "Smth's Wrong";
-  BitField.SetBit(Elem);
+  bitField.SetBit(Elem);
 }
 // ---------------------------------------------------------------------------
 void TSet::DelElem(const int Elem) // исключение элемента множества
 {
   if (Elem < 0 || Elem >= maxPower)
 	throw "Smth's Wrong";
-  BitField.ClrBit(Elem);
+  bitField.ClrBit(Elem);
 }
 // ---------------------------------------------------------------------------
 // теоретико-множественные операции
@@ -98,7 +98,7 @@ TSet TSet::operator+(const int Elem) // объединение с элемент
 {
   if (Elem < 0 || Elem >= maxPower)
 	throw "Smth's Wrong";
-  BitField.SetBit(Elem);
+  bitField.SetBit(Elem);
   return *this;
 }
 // ---------------------------------------------------------------------------
@@ -106,7 +106,7 @@ TSet TSet::operator-(const int Elem) // разность с элементом
 {
   if (Elem < 0 || Elem >= maxPower)
 	throw "Smth's Wrong";
-  BitField.ClrBit(Elem);
+  bitField.ClrBit(Elem);
   return *this;
 }
 // ---------------------------------------------------------------------------
